@@ -1,0 +1,139 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    text-wrap: balance;
+}
+
+:root {
+    --season: "Season";
+    --troye: "Troye Free";
+    --geraldine: "Geraldine - DEMO Ver.";
+    --text-primary: #333;
+    --secondary: #CABCAE;
+    --background: #EAE5DB;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--background);
+}
+header{
+    color: var(--secondary);
+    font-family: var(--troye);
+}
+
+header {
+    min-height: 9.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.nav-brand {
+    font-family: var(--season);
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--text-primary);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1.75rem;
+    margin-top: 1.25rem;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+main {
+    min-height: calc(100dvh - 9.5rem);
+}
+
+.form-container {
+    max-width: 400px;
+    width: 90%;
+    margin: 2rem auto;
+    font-family: var(--geraldine);
+
+}
+
+form {
+    display: grid;
+    place-items: center;
+}
+
+form h1 {
+    color: var(--text-primary);
+    letter-spacing: 2px;
+}
+
+form input {
+    font-family: var(--geraldine);
+    letter-spacing: 1px;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 1rem;
+    padding: .75rem 1rem;
+    border: 1px solid var(--text-primary);
+    outline: none;
+    border-radius: .5rem;
+}
+
+form input::placeholder {
+    font-family: var(--troye);
+    letter-spacing: 0px;
+}
+#password-reminder {
+    font-family: var(--troye);
+    color: var(--text-primary);
+    width: 100%;
+    margin-top: 1rem;
+    text-align: start;
+    font-size: .65rem;
+}
+form button {
+    background-color: var(--text-primary);
+    width: 100%;
+    font-family: var(--troye);
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--background);
+    padding: .75rem;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    opacity: .95;
+    transition: .15s;
+}
+form button:hover {
+    opacity: 1;
+}
+
+form a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: .65rem;
+    font-family: var(--troye);
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+form a:hover {
+    text-decoration: underline;
+}

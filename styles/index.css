@@ -99,10 +99,6 @@ nav {
     gap: 3rem;
 }
 
-nav > * {
-    /* border: 2px solid purple; */
-}
-
 #main-subtitle {
     position: absolute;
     bottom: 30vh;
@@ -383,25 +379,3 @@ main {
     margin: 2rem 0 2rem 2rem;
 }
 
-
-
-footer {
-    background-color: var(--background);
-    font-family: var(--geraldine);
-    padding-bottom: 3rem;
-}
-
-.footer-links {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border-top: 2px solid black;
-}
-
-.col-footer p {
-    margin-top: 1.5rem;
-}
-
-footer h1 {
-    font-size: 2.75rem;
-    margin-top: 3rem;
-}

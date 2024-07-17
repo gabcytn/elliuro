@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!isset($_SESSION["isLoggedIn"])) {
+        header("Location: webpages/login.php");
+    }   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +14,7 @@
     <link rel="preload" href="fonts/GeraldineDEMOVer.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/TroyeFree-Sans.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="img/logo_elliuro.JPG" type="image/x-icon">
     <script src="https://kit.fontawesome.com/4bc1035a4c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="styles/index.css">
@@ -15,7 +22,7 @@
 </head>
 <body>
     <section class="video">
-        <video id="video" autoplay loop src="img/home_banner.mp4"></video>
+        <video id="video" loop src="img/home_banner.mp4"></video>
         <header class="container">
             <nav>
                 <div class="nav-location">
@@ -183,7 +190,7 @@
                 </div>
             </div>
             <div class="section-her__poster">
-                <img src="img/hoodie_girl.png" alt="">
+                <img src="img/hoodie-girl.png" alt="">
                 <div class="section-her__poster--texts">
                     <h2>LUXE HOODIE FOR HER</h2>
                     <button>SHOP NOW</button>
@@ -256,38 +263,8 @@
 
     </main>
 
-    <footer>
-        <div class="footer-links container">
-            <div class="col-footer">
-                <p>ABOUT US</p>
-                <p>Our Story</p>
-                <p>About the Shop</p>
-                <p>Privacy Policy</p>
-                <p>Terms of Service</p>
-            </div>
-            <div class="col-footer">
-                <p>SUPPORT</p>
-                <p>Contact us</p>
-                <p>FAQ</p>
-                <p>Return Policy</p>
-                <p>Terms and Conditions</p>
-                <p>Warranty</p>
-            </div>
-            <div class="col-footer">
-                <p>GET IN TOUCH</p>
-                <p>Advertise</p>
-                <p>Press Release</p>
-                <p>General Inquiry</p>
-            </div>
-            <div class="col-footer">
-                <p>FOLLOW US ON</p>
-            </div>
-        </div>
-
-        <section class="container">
-            <h1>ELLIURO</h1>
-            <p>COPYRIGHT 2024 ELLIURO INC. For educational purposes only.</p>
-        </section>
-</footer>
+    <?php 
+        include "includes/footer.php";
+    ?>
 </body>
 </html>
