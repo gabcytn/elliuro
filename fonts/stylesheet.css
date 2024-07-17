@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Troye Free';
+    src: url('TroyeFree-Sans.woff2') format('woff2'),
+        url('TroyeFree-Sans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Geraldine - DEMO Ver.';
+    src: url('GeraldineDEMOVer.woff2') format('woff2'),
+        url('GeraldineDEMOVer.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Season';
+    src: url('SeasonRegular.woff2') format('woff2'),
+        url('SeasonRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

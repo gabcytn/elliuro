@@ -1,0 +1,407 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    text-wrap: balance;
+}
+
+:root {
+    --season: "Season";
+    --troye: "Troye Free";
+    --geraldine: "Geraldine - DEMO Ver.";
+    --text-primary: #333;
+    --secondary: #CABCAE;
+    --background: #EAE5DB;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.video {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    justify-self: center;
+    font-family: var(--season);
+    color: var(--secondary);
+    height: 100dvh;
+
+}
+header a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+nav {
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    backdrop-filter: blur(5px);
+
+}
+.nav-location {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+}
+.nav-main {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;;
+
+}
+.main_title {
+    width: 75%;
+    border-bottom: 1px solid var(--secondary);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    font-weight: bold;
+}
+.nav-sections {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.nav-icons {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav > * {
+    /* border: 2px solid purple; */
+}
+
+#main-subtitle {
+    position: absolute;
+    bottom: 30vh;
+    line-height: 2.5rem;
+
+    font-family: var(--geraldine);
+}
+
+main {
+    background-color: var(--background);
+    font-family: var(--troye);
+}
+
+.new-arrivals {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0 1rem;
+}
+.new-arrivals__title {
+    width: 30%;
+    font-family: var(--season);
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+.new-arrivals__carousel {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    overflow: scroll;
+
+}
+.new-arrivals__card {
+    width: 250px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.new-arrivals__text {
+    letter-spacing: 1px;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    color: var(--secondary);
+}
+.new-arrivals__img {
+    width: 200px;
+}
+
+.section-him {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.section-him__poster {
+    width: 55%;
+    position: relative;
+}
+.section-him__poster img {
+    width: 100%;
+}
+.section-him__poster--texts {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+    color: var(--background);
+    font-family: var(--season);
+    font-weight: 900;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-him__poster--texts button {
+    background-color: var(--text-primary);
+    color: var(--background);
+    padding: .75rem 2.25rem;
+    margin: 1rem auto 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: .9;
+    transition: opacity .2s;
+}
+.section-him__poster--texts button:hover {
+    opacity: 1;
+}
+
+.section-him__carousel {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-him__carousel--container {
+    max-width: 150%;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: url(../img/index-3.jpg) center no-repeat;
+    background-size: cover;
+}
+.section-him__carousel--container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#btn-carousel__left {
+    left: 5px;
+}
+#btn-carousel__right {
+    right: 5px;
+}
+.section-him__carousel--texts {
+    text-align: center;
+}
+.section-him__carousel--texts h3 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: .85rem;
+}
+
+.summer-collection h1 {
+    font-family: var(--geraldine);
+    margin-bottom: 1rem;
+    margin-left: 2em;
+}
+.summer-collection__list .new-arrivals__text {
+    font-size: 10px;
+}
+.summer-collection__list .new-arrivals__card {
+    background-color: var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1.025rem;
+}
+.summer-collection__list {
+    display: flex;
+    gap: .5rem;
+}
+
+
+/* HER SECTION */
+
+.section-her {
+    display: flex;
+    padding: 3rem 0;
+}
+
+.section-her__poster {
+    width: 55%;
+    position: relative;
+}
+.section-her__poster img {
+    width: 100%;
+}
+.section-her__poster--texts {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+    color: var(--background);
+    font-family: var(--season);
+    font-weight: 900;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.section-her__poster--texts button {
+    background-color: var(--text-primary);
+    color: var(--background);
+    padding: .75rem 2.25rem;
+    margin: 1rem auto 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: .9;
+    transition: opacity .2s;
+}
+.section-her__poster--texts button:hover {
+    opacity: 1;
+}
+
+.section-her__carousel {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.section-her__carousel--container {
+    max-width: 150%;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: url(../img/index-3.jpg) center no-repeat;
+    background-size: cover;
+}
+.section-her__carousel--container button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#btn-carousel__left {
+    left: 5px;
+}
+#btn-carousel__right {
+    right: 5px;
+}
+.section-her__carousel--texts {
+    text-align: center;
+}
+.section-her__carousel--texts h3 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: .85rem;
+}
+
+
+.section-testimonies {
+    display: flex;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+.section-testimonies__title {
+    width: 30%;
+    font-family: var(--season);
+    font-size: 2rem;
+    color: var(--text-primary);
+}
+.section-testimonies__carousel {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    overflow: scroll;
+
+}
+.section-testimonies__card {
+    width: 500px;
+    background-color: var(--secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 1rem 1.5rem;
+}
+.testimonies-stars,
+.testimonies-title,
+.testimonies-subtitle
+.testimonies-date {
+    margin-bottom: 1rem;
+}
+
+.testimonies-date {
+    color: #888;
+}
+.testimonies-content {
+    margin: 2rem 0 2rem 2rem;
+}
+
+
+
+footer {
+    background-color: var(--background);
+    font-family: var(--geraldine);
+    padding-bottom: 3rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 2px solid black;
+}
+
+.col-footer p {
+    margin-top: 1.5rem;
+}
+
+footer h1 {
+    font-size: 2.75rem;
+    margin-top: 3rem;
+}
