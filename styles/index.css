@@ -101,7 +101,7 @@ nav {
 
 #main-subtitle {
     position: absolute;
-    bottom: 30vh;
+    bottom: 20vh;
     line-height: 2.5rem;
 
     font-family: var(--geraldine);
@@ -357,7 +357,7 @@ main {
 
 }
 .section-testimonies__card {
-    width: 500px;
+    width: 400px;
     background-color: var(--secondary);
     border-radius: 10px;
     display: flex;

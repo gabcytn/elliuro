@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if (isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == true) {
+        $id = $_SESSION["user_id"];
+        header("Location: ../index.php?$id");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +40,7 @@
         </nav>
     </header>
     <main>
-        <form action="#" method="post" autocomplete="off" class="form-container">
+        <form action="../php/login_submit.php" method="post" autocomplete="off" class="form-container">
             <h1>Login</h1>
             <input type="text" name="email" id="email" placeholder="EMAIL ADDRESS">
             <input type="password" name="password" id="password" placeholder="PASSWORD">

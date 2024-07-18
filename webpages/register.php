@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == true) {
+        $id = $_SESSION["user_id"];
+        header("Location: ../index.php?$id");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +20,7 @@
     <script src="https://kit.fontawesome.com/4bc1035a4c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../styles/register.css">
+    <script defer src="../js/register.js"></script>
 </head>
 <body>
     <header>
@@ -32,13 +41,14 @@
         </nav>
     </header>
     <main>
-        <form action="#" method="post" autocomplete="off" class="form-container">
+        <form action="../php/register_submit.php" method="post" autocomplete="off" class="form-container">
             <h1>Sign up</h1>
-            <input type="email" name="email" id="email" placeholder="EMAIL ADDRESS">
-            <input type="text" name="lname" id="lname" placeholder="LAST NAME">
-            <input type="text" name="fname" id="fname" placeholder="FIRST NAME">
-            <input type="text" name="un" id="un" placeholder="USERNAME">
-            <input type="password" name="password" id="password" placeholder="PASSWORD">
+            <input type="email" name="email" id="email" placeholder="EMAIL ADDRESS" required>
+            <input type="text" name="lname" id="lname" placeholder="LAST NAME" required>
+            <input type="text" name="fname" id="fname" placeholder="FIRST NAME" required>
+            <input type="text" name="un" id="un" placeholder="USERNAME" required>
+            <input type="password" name="password" id="password" placeholder="PASSWORD" required>
+            <input type="password" name="cpassword" id="cpassword" placeholder="CONFIRM PASSWORD" required>
             <p id="password-reminder">Password must be atleast 8 characters</p>
             <button type="submit" id="login-btn">REGISTER</button>
 
