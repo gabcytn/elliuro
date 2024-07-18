@@ -34,7 +34,7 @@
                         <h1>Elliuro</h1>
                     </div>
                     <div class="nav-sections">
-                        <a href="#">MEN</a>
+                        <a href="webpages/mens.php">MEN</a>
                         <a href="#">WOMEN</a>
                         <a href="#">KIDS</a>
                     </div>
@@ -42,7 +42,7 @@
                 <div class="nav-icons">
                     <a href="#"><span class="material-symbols-outlined">search</span></a>
                     <a href="#"><span class="material-symbols-outlined">person</span></a>
-                    <a href="#"><span class="material-symbols-outlined">local_mall</span></a>
+                    <a href="webpages/cart.php"><span class="material-symbols-outlined">local_mall</span></a>
 
                 </div>
             </nav>

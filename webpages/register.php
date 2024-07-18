@@ -12,9 +12,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="preload" href="fonts/SeasonRegular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/GeraldineDEMOVer.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/TroyeFree-Sans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/SeasonRegular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/GeraldineDEMOVer.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../fonts/TroyeFree-Sans.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="shortcut icon" href="../img/logo_elliuro.JPG" type="image/x-icon">
     <script src="https://kit.fontawesome.com/4bc1035a4c.js" crossorigin="anonymous"></script>

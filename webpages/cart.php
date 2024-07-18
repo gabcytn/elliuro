@@ -1,16 +1,9 @@
-<?php
-    session_start();
-    if (isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == true) {
-        $id = $_SESSION["user_id"];
-        header("Location: ../index.php?$id");
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Cart</title>
     <link rel="preload" href="../fonts/SeasonRegular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/GeraldineDEMOVer.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/TroyeFree-Sans.woff2" as="font" type="font/woff2" crossorigin>
@@ -18,8 +11,8 @@
     <link rel="shortcut icon" href="../img/logo_elliuro.JPG" type="image/x-icon">
     <script src="https://kit.fontawesome.com/4bc1035a4c.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="../styles/login.css">
-    <script defer src="../js/login.js"></script>
+    <link rel="stylesheet" href="../styles/cart.css">
+
 </head>
 <body>
     <header>
@@ -40,25 +33,6 @@
         </nav>
     </header>
     <main>
-        <form action="../php/login_submit.php" method="post" autocomplete="off" class="form-container">
-            <h1>Login</h1>
-            <input type="text" name="email" id="email" placeholder="EMAIL ADDRESS" required>
-            <input type="password" name="password" id="password" placeholder="PASSWORD" required>
-            <p id="password-reminder">Password must be atleast 8 characters</p>
-            <button type="submit" id="login-btn">Login</button>
-            <div class="login-help">
-                <div class="login-help__remember">
-                    <input type="checkbox" name="remember-me" id="remember-me">
-                    <label for="remember-me">Remember me</label>
-                </div>
-                <a href="#" id="forgot-pass">Forgot password?</a>
-            </div>
-
-            <div class="login-register">
-                <p>New to the elliuro community?</p>
-                <a href="register.php">Create an account</a>
-            </div>
-        </form>
 
     </main>
 

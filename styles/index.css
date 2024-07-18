@@ -91,6 +91,10 @@ nav {
     justify-content: center;
     gap: 5rem;
 }
+
+.nav-sections a {
+    font-family: var(--geraldine);
+}
 .nav-icons {
     width: 25%;
     display: flex;

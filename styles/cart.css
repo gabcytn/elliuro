@@ -1,0 +1,81 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    text-wrap: balance;
+}
+
+@font-face {
+    font-family: 'Troye';
+    src: url('../fonts/TroyeFree-Sans.woff2') format('woff2'),
+         url('../fonts/TroyeFree-Sans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    --season: "Season";
+    --troye: "Troye";
+    --geraldine: "Geraldine - DEMO Ver.";
+    --text-primary: #333;
+    --secondary: #CABCAE;
+    --background: #EAE5DB;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--background);
+}
+header{
+    color: var(--secondary);
+    font-family: var(--troye);
+}
+
+header {
+    min-height: 9.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+nav a {
+    color: var(--text-primary);
+    font-family: var(--troye);
+    text-decoration: none;
+}
+
+.nav-link {
+    font-family: "Troye Free";
+}
+
+.nav-brand {
+    font-family: var(--season);
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--text-primary);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1.75rem;
+    margin-top: 1.25rem;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+main {
+    min-height: calc(100dvh - 9.5rem);
+}
