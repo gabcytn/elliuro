@@ -3,8 +3,6 @@
     if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
         header("Location: webpages/login.php");
     }   
-
-    $uid = $_GET["uid"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +22,7 @@
 </head>
 <body>
     <section class="video">
-        <video id="video" loop src="img/home_banner.mp4"></video>
+        <video id="video" autoplay loop src="img/home_banner.mp4"></video>
         <header class="container">
             <nav>
                 <div class="nav-location">
@@ -36,15 +34,15 @@
                         <a href="">Elliuro</a>
                     </div>
                     <div class="nav-sections">
-                        <a href="webpages/mens.php?uid=<?php echo $uid; ?>">MEN</a>
-                        <a href="webpages/womens.php?uid=<?php echo $uid; ?>">WOMEN</a>
+                        <a href="webpages/mens.php">MEN</a>
+                        <a href="webpages/womens.php">WOMEN</a>
                         <a href="#">KIDS</a>
                     </div>
                 </div>
                 <div class="nav-icons">
                     <a href="#"><span class="material-symbols-outlined">search</span></a>
-                    <a href="webpages/profile.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">person</span></a>
-                    <a href="webpages/cart.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">local_mall</span></a>
+                    <a href="webpages/profile.php"><span class="material-symbols-outlined">person</span></a>
+                    <a href="webpages/cart.php"><span class="material-symbols-outlined">local_mall</span></a>
 
                 </div>
             </nav>

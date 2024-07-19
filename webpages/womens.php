@@ -4,8 +4,6 @@
     if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
         header("Location: login.php");
     }   
-
-    $uid = $_GET["uid"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,17 +24,17 @@
     <header>
         <nav class="container">
             <div class="nav-main">
-                <a href="../index.php?uid=<?php echo $uid; ?>"class="nav-brand">ELLIURO</a>
+                <a href="../index.php"class="nav-brand">ELLIURO</a>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="mens.php?uid=<?php echo $uid; ?>" class="nav-link">Men</a></li>
+                    <li class="nav-item"><a href="mens.php" class="nav-link">Men</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Women</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Kids</a></li>
                 </ul>
             </div>
             <div class="nav-icons">
                 <a href=""><span class="material-symbols-outlined">search</span></a>
-                <a href="profile.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">person</span></a>
-                <a href="../webpages/cart.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">local_mall</span></a>
+                <a href="profile.php"><span class="material-symbols-outlined">person</span></a>
+                <a href="../webpages/cart.php"><span class="material-symbols-outlined">local_mall</span></a>
             </div>
         </nav>
     </header>
@@ -84,7 +82,7 @@
                 <?php  while ($row = $cur->fetch_assoc()): ?>
                     <div class="shop-item">
                         <div class="shop-item__image">
-                            <a href="item.php?uid=<?php echo $uid; ?>&iid=<?php echo $row["item_id"];?>&s=women">
+                            <a href="item.php?iid=<?php echo $row["item_id"];?>&s=women">
                                 <img src="<?php echo $row["item_img"]; ?>" alt="">
                             </a>
                         </div>
@@ -103,37 +101,37 @@
             <div class="items-row">
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="item.php?uid=<?php echo $uid; ?>&iid=5&s=women">
+                        <a href="item.php?iid=5&s=women">
                             <img src="../img/index-2.png" alt="">
                         </a>
                     </div>
                     <div class="shop-item__texts">
                         <p>Elliuro Urban Hoodie</p>
-                        <p>$1300</p>
+                        <p>$700</p>
                         <p>3 colors</p>
                     </div>
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="item.php?uid=<?php echo $uid; ?>&iid=5&s=women">
+                        <a href="item.php?iid=5&s=women">
                             <img src="../img/hoodie.png" alt="">
                         </a>
                     </div>
                     <div class="shop-item__texts">
                         <p>Elliuro Urban Hoodie</p>
-                        <p>$1300</p>
+                        <p>$700</p>
                         <p>3 colors</p>
                     </div>
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="item.php?uid=<?php echo $uid; ?>&iid=5&s=women">
+                        <a href="item.php?iid=5&s=women">
                             <img src="../img/hoodie.png" alt="">
                         </a>
                     </div>
                     <div class="shop-item__texts">
                         <p>Elliuro Urban Hoodie</p>
-                        <p>$1300</p>
+                        <p>$700</p>
                         <p>3 colors</p>
                     </div>
                 </div>

@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION["user_id"] = $id;
         $_SESSION["isLoggedIn"] = true;
-        header("Location: ../index.php?uid=$id");
+        header("Location: ../index.php");
     } else {
         echo "<script>alert('Incorrect credentials!'); location.href = '../webpages/login.php'</script>";
 

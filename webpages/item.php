@@ -5,7 +5,7 @@
         header("Location: login.php");
     }   
 
-    $uid = $_GET["uid"];
+    $uid = $_SESSION["user_id"];
     $iid = $_GET["iid"];
     $s = $_GET["s"];
 ?>
@@ -28,17 +28,17 @@
     <header>
         <nav class="container">
             <div class="nav-main">
-                <a href="../index.php?uid=<?php echo $uid; ?>" class="nav-brand">ELLIURO</a>
+                <a href="../index.php" class="nav-brand">ELLIURO</a>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="mens.php?uid=<?php echo $uid; ?>" class="nav-link">Men</a></li>
-                    <li class="nav-item"><a href="womens.php?uid=<?php echo $uid; ?>" class="nav-link">Women</a></li>
+                    <li class="nav-item"><a href="mens.php" class="nav-link">Men</a></li>
+                    <li class="nav-item"><a href="womens.php" class="nav-link">Women</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Kids</a></li>
                 </ul>
             </div>
             <div class="nav-icons">
                 <a href="#"><span class="material-symbols-outlined">search</span></a>
-                <a href="#"><span class="material-symbols-outlined">person</span></a>
-                <a href="../webpages/cart.php?uid=<?php echo $uid ?>"><span class="material-symbols-outlined">local_mall</span></a>
+                <a href="profile.php"><span class="material-symbols-outlined">person</span></a>
+                <a href="cart.php"><span class="material-symbols-outlined">local_mall</span></a>
             </div>
         </nav>
     </header>
@@ -73,7 +73,7 @@
                     <p>Size</p>
                     <i class="fa-solid fa-angle-down"></i>
                 </div>
-                <button id="add-to-cart"><a href="../php/add-to-cart.php?uid=<?php echo $uid . "&iid=$iid&s=$s"; ?>">Add to cart</a></button>
+                <button id="add-to-cart"><a href="../php/add-to-cart.php?iid=<?php echo $iid; ?>&s=<?php echo $s; ?>">Add to cart</a></button>
             </div>
         </section>
     </main>
