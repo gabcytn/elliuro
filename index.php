@@ -35,7 +35,7 @@
                     </div>
                     <div class="nav-sections">
                         <a href="webpages/mens.php">MEN</a>
-                        <a href="#">WOMEN</a>
+                        <a href="webpages/womens.php">WOMEN</a>
                         <a href="#">KIDS</a>
                     </div>
                 </div>
