@@ -2,6 +2,9 @@
 
 session_start();
 include "../includes/db_connection.php";
+if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
+    header("Location: ../webpages/login.php");
+} 
 $iid = $_GET["iid"];
 $qty = $_GET["qty"];
 

@@ -99,7 +99,7 @@
                         <p>Estimated total</p>
                         <p>$<?php echo $price; ?></p>
                     </div>
-                    <form action="" method="post">
+                    <form action="../php/checkout.php" method="post">
                         <button type="submit">Checkout</button>
                     </form>
                 </div>

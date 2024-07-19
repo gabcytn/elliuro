@@ -1,8 +1,7 @@
 <?php
     session_start();
     if (isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] == true) {
-        $id = $_SESSION["user_id"];
-        header("Location: ../index.php?$id");
+        header("Location: ../index.php");
     }
 ?>
 <!DOCTYPE html>
