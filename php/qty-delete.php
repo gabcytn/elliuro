@@ -4,6 +4,7 @@ session_start();
 include "../includes/db_connection.php";
 if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
     header("Location: ../webpages/login.php");
+    exit();
 } 
 $iid = $_GET["iid"];
 

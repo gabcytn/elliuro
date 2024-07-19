@@ -3,9 +3,6 @@
 include "../includes/db_connection.php";
 
 session_start();
-if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
-    header("Location: ../webpages/login.php");
-} 
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
@@ -29,6 +26,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         }
     }
-
-
 }
+
+if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
+    header("Location: ../webpages/login.php");
+    exit();
+} 
