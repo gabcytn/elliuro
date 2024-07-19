@@ -3,7 +3,9 @@
     include "../includes/db_connection.php";
     if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
         header("Location: login.php");
-    }   
+    }
+    
+    $uid = $_GET["uid"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,17 +26,17 @@
     <header>
         <nav class="container">
             <div class="nav-main">
-                <h1 class="nav-brand">ELLIURO</h1>
+                <a href="../index.php?uid=<?php echo $uid; ?>" class="nav-brand">ELLIURO</a>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link">Men</a></li>
-                    <li class="nav-item"><a href="womens.php" class="nav-link">Women</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Kids</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Men</a></li>
+                    <li class="nav-item"><a href="womens.php?uid=<?php echo $uid; ?>" class="nav-link">Women</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Kids</a></li>
                 </ul>
             </div>
             <div class="nav-icons">
-                <a href="#"><span class="material-symbols-outlined">search</span></a>
-                <a href="#"><span class="material-symbols-outlined">person</span></a>
-                <a href="../webpages/item.php"><span class="material-symbols-outlined">local_mall</span></a>
+                <a href=""><span class="material-symbols-outlined">search</span></a>
+                <a href="profile.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">person</span></a>
+                <a href="../webpages/cart.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">local_mall</span></a>
             </div>
         </nav>
     </header>
@@ -71,7 +73,7 @@
         </section>
 
         <?php
-            $stmt = $conn->prepare("SELECT * FROM items");
+            $stmt = $conn->prepare("SELECT * FROM items WHERE item_section = 'men'");
             $stmt->execute();
 
             $cur = $stmt->get_result();
@@ -82,7 +84,7 @@
                 <?php  while ($row = $cur->fetch_assoc()): ?>
                     <div class="shop-item">
                         <div class="shop-item__image">
-                            <a href="item.php?iid=<?php echo $row["item_id"];?>&s=men">
+                            <a href="item.php?uid=<?php echo $uid; ?>&iid=<?php echo $row["item_id"];?>&s=men">
                                 <img src="<?php echo $row["item_img"]; ?>" alt="">
                             </a>
                         </div>
@@ -101,7 +103,7 @@
             <div class="items-row">
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="item.php?iid=1&s=men">
+                        <a href="item.php?uid=<?php echo $uid; ?>&iid=1&s=men">
                             <img src="../img/index-2.png" alt="">
                         </a>
                     </div>
@@ -113,7 +115,7 @@
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="item.php?iid=1&s=men">
+                        <a href="item.php?uid=<?php echo $uid; ?>&iid=1&s=men">
                             <img src="../img/hoodie.png" alt="">
                         </a>
                     </div>
@@ -125,7 +127,7 @@
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="item.php?iid=1&s=men">
+                        <a href="item.php?uid=<?php echo $uid; ?>&iid=1&s=men">
                             <img src="../img/hoodie.png" alt="">
                         </a>
                     </div>
@@ -136,26 +138,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="items-row">
-                <?php  while ($row = $cur->fetch_assoc()): ?>
-                    <div class="shop-item">
-                        <div class="shop-item__image">
-                            <a href="item.php?iid=<?php echo $row["item_id"];?>">
-                                <img src="<?php echo $row["item_img"]; ?>" alt="">
-                            </a>
-                        </div>
-                        <div class="shop-item__texts">
-                            <p><?php echo $row["item_name"];?></p>
-                            <p>$<?php echo $row["item_price"];?></p>
-                            <p>3 colors</p>
-                        </div>
-                    </div>
-                <?php 
-                    endwhile;
-                ?>
-
-            </div> -->
             
         </section>
        

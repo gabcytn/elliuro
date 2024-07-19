@@ -19,7 +19,6 @@
     <script src="https://kit.fontawesome.com/4bc1035a4c.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../styles/login.css">
-    <script defer src="../js/login.js"></script>
 </head>
 <body>
     <header>

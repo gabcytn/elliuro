@@ -3,6 +3,8 @@
     if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
         header("Location: webpages/login.php");
     }   
+
+    $uid = $_GET["uid"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,18 +33,18 @@
                 </div>
                 <div class="nav-main">
                     <div class="main_title">
-                        <h1>Elliuro</h1>
+                        <a href="">Elliuro</a>
                     </div>
                     <div class="nav-sections">
-                        <a href="webpages/mens.php">MEN</a>
-                        <a href="webpages/womens.php">WOMEN</a>
+                        <a href="webpages/mens.php?uid=<?php echo $uid; ?>">MEN</a>
+                        <a href="webpages/womens.php?uid=<?php echo $uid; ?>">WOMEN</a>
                         <a href="#">KIDS</a>
                     </div>
                 </div>
                 <div class="nav-icons">
                     <a href="#"><span class="material-symbols-outlined">search</span></a>
-                    <a href="#"><span class="material-symbols-outlined">person</span></a>
-                    <a href="webpages/cart.php"><span class="material-symbols-outlined">local_mall</span></a>
+                    <a href="webpages/profile.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">person</span></a>
+                    <a href="webpages/cart.php?uid=<?php echo $uid; ?>"><span class="material-symbols-outlined">local_mall</span></a>
 
                 </div>
             </nav>

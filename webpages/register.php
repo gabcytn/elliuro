@@ -26,7 +26,7 @@
     <header>
         <nav class="container">
             <div class="nav-main">
-                <h1 class="nav-brand">ELLIURO</h1>
+                <a href="" class="nav-brand">ELLIURO</a>
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#" class="nav-link">Men</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Women</a></li>

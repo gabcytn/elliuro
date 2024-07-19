@@ -1,0 +1,170 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    text-wrap: balance;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+    font-family: 'Troye';
+    src: url('../fonts/TroyeFree-Sans.woff2') format('woff2'),
+         url('../fonts/TroyeFree-Sans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root {
+    --season: "Season";
+    --troye: "Troye";
+    --geraldine: "Geraldine - DEMO Ver.";
+    --text-primary: #333;
+    --secondary: #CABCAE;
+    --background: #EAE5DB;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: var(--background);
+}
+header{
+    color: var(--secondary);
+    font-family: var(--troye);
+}
+
+header {
+    min-height: 9.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+nav a {
+    color: var(--text-primary);
+    font-family: var(--troye);
+    text-decoration: none;
+}
+
+.nav-link {
+    font-family: "Troye Free";
+}
+
+.nav-brand {
+    font-family: var(--season);
+    font-size: 2.75rem;
+    font-weight: 900;
+    color: var(--text-primary);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1.75rem;
+    margin-top: 1.25rem;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+main {
+    min-height: calc(100dvh - 9.5rem);
+}
+
+.section-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-main > * {
+    /* border: 2px solid green; */
+}
+.section-main__img {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-main__details {
+    width: 40%;
+    border-radius: 8px;
+    align-self: flex-start;
+    font-family: var(--troye);
+    background-color: var(--text-primary);
+    color: var(--background);
+    padding: 1.25rem;
+}
+#item-name {
+    font-size: 1.75rem;
+    margin-left: 1rem;
+}
+#item-price {
+    font-size: .95rem;
+    margin-left: 1rem;
+    margin-bottom: 2.5rem;
+}
+.item-color,
+.item-size {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 0;
+
+    border-top: 1px solid var(--background);
+    border-bottom: 1px solid var(--background);
+}
+.item-sizes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+.size img {
+    width: 75px;
+    cursor: pointer;
+}
+#add-to-cart {
+    background-color: var(--secondary);
+    font-weight: 900;
+    width: 100%;
+    padding: 1.25rem 0;
+    margin-top: 2.5rem  ;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: .9;
+    transition: .15s;
+    position: relative;
+}
+#add-to-cart:hover {
+    opacity: 1;
+}
+#add-to-cart a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--troye);
+    color: var(--text-primary);
+    text-decoration: none;
+}
