@@ -21,12 +21,3 @@ logoutBtn.addEventListener("click", () => {
 noLogout.addEventListener("click", () => {
     logoutDialog.close();
 })
-
-// editForm.addEventListener("submit", e => {
-//     const file = document.querySelector("#profile_img");
-
-//     if (file.files.length === 0) {
-//         e.preventDefault();
-//         alert("")
-//     }
-// })

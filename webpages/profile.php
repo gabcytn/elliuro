@@ -10,7 +10,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
     <link rel="preload" href="../fonts/SeasonRegular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../fonts/GeraldineDEMOVer.woff2" as="font" type="font/woff2" crossorigin>
@@ -144,7 +143,7 @@
             <input type="text" name="lname" id="lname" placeholder="LAST NAME" value="<?php echo $form_row["user_lastname"] ?>" required>
             <input type="text" name="fname" id="fname" placeholder="FIRST NAME" value="<?php echo $form_row["user_firstname"] ?>" required>
             <input type="text" name="un" id="un" placeholder="USERNAME" value="<?php echo $form_row["user_username"] ?>" required>
-            <input type="text" name="bio" id="bio" placeholder="ADD BIO">
+            <input type="text" name="bio" id="bio" placeholder="ADD BIO" value="<?php echo $form_row["user_bio"]; ?>">
 
             <?php $conn->close(); ?>
             <div class="form-buttons">
