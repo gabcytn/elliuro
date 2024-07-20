@@ -25,15 +25,15 @@
             <div class="nav-main">
                 <h1 class="nav-brand">ELLIURO</h1>
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link">Men</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Women</a></li>
+                    <li class="nav-item"><a href="mens.php" class="nav-link">Men</a></li>
+                    <li class="nav-item"><a href="womens.php" class="nav-link">Women</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">Kids</a></li>
                 </ul>
             </div>
             <div class="nav-icons">
                 <a href="#"><span class="material-symbols-outlined">search</span></a>
-                <a href="#"><span class="material-symbols-outlined">person</span></a>
-                <a href="#"><span class="material-symbols-outlined">local_mall</span></a>
+                <a href="profile.php"><span class="material-symbols-outlined">person</span></a>
+                <a href="cart.php"><span class="material-symbols-outlined">local_mall</span></a>
             </div>
         </nav>
     </header>

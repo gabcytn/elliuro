@@ -1,6 +1,5 @@
 <?php 
 
-session_start();
 include "../includes/db_connection.php";
 
 
@@ -8,8 +7,6 @@ include "../includes/db_connection.php";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $pw = $_POST["password"];
-    // $hashed = password_hash($pw, PASSWORD_DEFAULT);
-    echo $email;
 
     $stmt = $conn->prepare("SELECT user_password FROM users WHERE user_email = ?");
     $stmt->bind_param("s", $email);
@@ -27,6 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $id = $id["user_id"];
 
+        session_start();
         $_SESSION["user_id"] = $id;
         $_SESSION["isLoggedIn"] = true;
         header("Location: ../index.php");
@@ -36,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
-    header("Location: ../webpages/login.php");
-    exit();
-} 
+// if (!isset($_SESSION["isLoggedIn"]) && $_SESSION["isLoggedIn"] != true) {
+//     header("Location: ../webpages/login.php");
+//     exit();
+// } 
