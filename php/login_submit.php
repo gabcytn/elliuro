@@ -7,6 +7,7 @@ include "../includes/db_connection.php";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $pw = $_POST["password"];
+    $remember = isset($_POST["remember-me"]);
 
     $stmt = $conn->prepare("SELECT user_password FROM users WHERE user_email = ?");
     $stmt->bind_param("s", $email);
@@ -23,6 +24,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $id = $retrieved_id->fetch_assoc();
 
         $id = $id["user_id"];
+
+        if ($remember) {
+            setcookie("email", $email, time() + (86400 * 30), "/");
+            setcookie("password", $pw, time() + (86400 * 30), "/");
+        } else {
+            setcookie("email", "", time() - 3600, "/");
+            setcookie("password", "", time() - 3600, "/");
+        }
 
         session_start();
         $_SESSION["user_id"] = $id;

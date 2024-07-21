@@ -39,13 +39,13 @@
     <main>
         <form action="../php/login_submit.php" method="post" autocomplete="off" class="form-container">
             <h1>Login</h1>
-            <input type="text" name="email" id="email" placeholder="EMAIL ADDRESS" required>
-            <input type="password" name="password" id="password" placeholder="PASSWORD" required>
+            <input type="text" name="email" id="email" placeholder="EMAIL ADDRESS" required value="<?php echo isset($_COOKIE["email"]) ? $_COOKIE["email"] : "" ?>">
+            <input type="password" name="password" id="password" placeholder="PASSWORD" required value="<?php echo isset($_COOKIE["password"]) ? $_COOKIE["password"] : "" ?>">
             <p id="password-reminder">Password must be atleast 8 characters</p>
             <button type="submit" id="login-btn">Login</button>
             <div class="login-help">
                 <div class="login-help__remember">
-                    <input type="checkbox" name="remember-me" id="remember-me">
+                    <input type="checkbox" name="remember-me" id="remember-me" <?php echo isset($_COOKIE["email"]) ? "checked" : "" ?>>
                     <label for="remember-me">Remember me</label>
                 </div>
                 <p id="forgot-pass">Forgot password?</p>
