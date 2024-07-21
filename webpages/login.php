@@ -48,7 +48,7 @@
                     <input type="checkbox" name="remember-me" id="remember-me">
                     <label for="remember-me">Remember me</label>
                 </div>
-                <a href="#" id="forgot-pass">Forgot password?</a>
+                <p id="forgot-pass">Forgot password?</p>
             </div>
 
             <div class="login-register">
@@ -62,5 +62,47 @@
     <?php
         include "../includes/footer.php";
     ?>
+
+    <dialog id="reset-dialog">
+        <form action="../php/reset-pass.php" id="reset-pass" method="post" autocomplete="off">
+            <h2>Forgot password?</h2>
+            <input type="email" name="email" id="email-reset" placeholder="EMAIL" required>
+            <input type="password" name="new-pw" id="new-pw" placeholder="NEW PASSWORD" required>
+            <input type="password" name="new-cpw" id="new-cpw" placeholder="CONFIRM PASSWORD" required>
+
+            <div class="form-buttons">
+                <button type="button" id="close-reset">Close</button>
+                <button type="submit" id="save-reset">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script>
+        const forgotPass = document.querySelector("#forgot-pass");
+        const resetDialog = document.querySelector("#reset-dialog");
+        const closeReset = document.querySelector("#close-reset");
+        const resetForm = document.querySelector("#reset-dialog form");
+
+        const newPW = document.querySelector("#new-pw");
+        const newCPW = document.querySelector("#new-cpw");
+        forgotPass.addEventListener("click" , () => {
+            resetDialog.showModal();
+        });
+
+        closeReset.addEventListener("click", () => {
+            resetDialog.close();
+        });
+
+        resetForm.addEventListener("submit", e => {
+            if (newPW.value !== newCPW.value) {
+                alert("Passwords do not match!");
+                e.preventDefault();
+            } else if (newPW.value.length < 8) {
+                alert("Password must be 8 characters and above");
+                e.preventDefault();
+            }
+        });
+    </script>
+
 </body>
 </html>

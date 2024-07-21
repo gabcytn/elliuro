@@ -151,7 +151,7 @@ form button:hover {
     align-items: center;
     justify-content: flex-end;
     color: var(--text-primary);
-    text-decoration: none;
+    cursor: pointer;
 }
 #forgot-pass:hover {
     text-decoration: underline;
@@ -181,4 +181,83 @@ form button:hover {
 }
 .login-register a:hover {
     text-decoration: none;
+}
+
+#reset-dialog {
+    background-color: var(--background);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    border-radius: .85rem;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+#reset-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#reset-dialog {
+    font-family: var(--troye);
+}
+
+#reset-dialog h2 {
+    font-size: 1rem;
+}
+
+
+dialog form input {
+    font-family: var(--geraldine);
+    font-size: .8rem;
+    letter-spacing: 1px;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 1rem;
+    padding: .75rem 1rem;
+    border: 1px solid var(--text-primary);
+    outline: none;
+    border-radius: .5rem;
+}
+
+dialog form input::placeholder {
+    font-family: var(--troye);
+    letter-spacing: 0px;
+}
+
+.form-buttons {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap:1rem;
+}
+
+.form-buttons button {
+    font-family: var(--troye);
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: .5rem;
+    opacity: 0.9;
+    transition: opacity .15s;
+    cursor: pointer;
+}
+
+.form-buttons button:hover {
+    opacity: 1;
+}
+
+#save-reset {
+    background-color: var(--text-primary);
+    color: var(--background);
+}
+
+#close-reset {
+    background-color: rgb(185, 19, 19);
+    color: var(--background);
 }
